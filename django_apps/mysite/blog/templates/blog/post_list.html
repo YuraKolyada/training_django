@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Django blog</title>
+	</head>
+	<body>
+        <div>
+            <h1><a href="">Django Blog</a></h1>
+        </div>
+       {% for post in pos%}
+       <div>
+       		<p>published: {{post.published_date}}</p>
+       		<h1><a href="">{{post.title}}</a></h1>
+       		<p>{{post.text|linebreaks}}</p>
+       </div>
+       {%endfor%}
+    </body>
+</html>
